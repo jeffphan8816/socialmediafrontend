@@ -24,6 +24,6 @@ yarn-error.log*
 
 .env
 
-.idea
+/.idea
 
 package-lock.json
