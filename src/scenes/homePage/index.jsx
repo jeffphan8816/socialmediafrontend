@@ -7,8 +7,7 @@ import MyPostWidget from "components/Widgets/MyPostWidget";
 
 const HomePage = () => {
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
-  const { _id, picturePath } = useSelector((state) => state.user.result);
-  const token = useSelector((state) => state.token);
+  const { _id, picturePath } = useSelector((state) => state.user);
 
   return (
     <Box>
@@ -27,7 +26,7 @@ const HomePage = () => {
           flexBasis={isNonMobile ? "42%" : undefined}
           marginTop={isNonMobile ? "undefined" : "2rem"}
         >
-          <MyPostWidget picturePath={picturePath} token={token} />
+          <MyPostWidget picturePath={picturePath} />
         </Box>
 
         {isNonMobile && <Box flexBasis='26%'></Box>}
