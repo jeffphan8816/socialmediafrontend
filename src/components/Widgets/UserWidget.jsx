@@ -8,15 +8,16 @@ import { Box, useTheme, Divider, Typography } from "@mui/material";
 import UserImage from "components/UserImage/UserImage";
 import WidgetWrapper from "components/WidgetWrapper/WidgetWrapper";
 import FlexBetween from "components/FlexBetween/FlexBetween";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { setFriends } from "state";
 
 const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null);
   const { palette } = useTheme();
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const token = useSelector((state) => state.token);
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
@@ -32,11 +33,24 @@ const UserWidget = ({ userId, picturePath }) => {
     });
     const data = await res.json();
     setUser(data);
+    
+    
   };
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const getFriends = async () => {
+    const res = await fetch(`http://localhost:3001/users/${userId}/friends`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await res.json();
+    dispatch(setFriends({ friends: data }));
+  };
+
   useEffect(() => {
     getUser();
+    getFriends();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!user) {

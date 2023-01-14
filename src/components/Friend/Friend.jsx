@@ -5,8 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
 import UserImage from "components/UserImage/UserImage";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = useSelector((state) => state.token);
@@ -18,6 +20,8 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const light = palette.primary.light;
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
+
+  
 
   const isFriend = friends.find((friend) => friend._id === friendId);
   const patchFriend = async () => {
