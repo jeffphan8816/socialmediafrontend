@@ -49,7 +49,7 @@ const PostWidget = ({
   };
 
   return (
-    <WidgetWrapper>
+    <WidgetWrapper margin="1rem 0">
       <Friend
         friendId={postUserId}
         name={name}
@@ -94,7 +94,7 @@ const PostWidget = ({
         </IconButton>
       </FlexBetween>
 
-      <Divider sx={{ marginTop: "0.5rem" }} />
+      {/* <Divider sx={{ marginTop: "0.5rem" }} /> */}
 
       {isComments && (
         <Box sx={{ marginTop: "0.5rem" }}>

@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 import NavBar from "components/NavBar/NavBar";
 import MyPostWidget from "components/Widgets/MyPostWidget";
 import PostsWidget from "components/Widgets/PostsWidget";
+import AdvertWidget from "components/Widgets/AdvertWidget";
+import FriendListWidget from "components/Widgets/FriendListWidget";
 
 const HomePage = () => {
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
@@ -28,10 +30,17 @@ const HomePage = () => {
           marginTop={isNonMobile ? "undefined" : "2rem"}
         >
           <MyPostWidget picturePath={picturePath} />
-          <PostsWidget userId={_id}/>
+          <PostsWidget userId={_id} />
         </Box>
 
-        {isNonMobile && <Box flexBasis='26%'></Box>}
+        {isNonMobile && (
+          <Box flexBasis='26%'>
+            <AdvertWidget />
+
+            <Box margin='2rem 0' />
+            <FriendListWidget userId={_id} />
+          </Box>
+        )}
       </Box>
     </Box>
   );
