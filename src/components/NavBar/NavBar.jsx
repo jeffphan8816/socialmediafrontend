@@ -39,8 +39,8 @@ const NavBar = () => {
   const background = theme.palette.background.default;
   const alt = theme.palette.background.alt;
 
-  //   const fullName = `${user.firstName} ${user.lastName}`;
-  const fullName = "John Doe";
+    const fullName = `${user.firstName} ${user.lastName}`;
+  // const fullName = "John Doe";
 
   return (
     <FlexBetween padding='1rem 6%' backgroundColor={alt}>

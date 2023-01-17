@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setFriends } from "state";
 
-const FriendListWidget = ({ userId }) => {
+const FriendListWidget = ({ userId, sx }) => {
   const { palette } = useTheme();
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
@@ -34,7 +34,7 @@ const FriendListWidget = ({ userId }) => {
   }
 
   return (
-    <WidgetWrapper>
+    <WidgetWrapper sx={sx}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
         <Typography variant='h4' sx={{ color: dark }}>
           Friends
