@@ -11,10 +11,10 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
-import { setLogin } from "state";
+import { setLogin } from "../../state"; 
 import { useNavigate } from "react-router-dom";
 import Dropzone from "react-dropzone";
-import FlexBetween from "components/FlexBetween/FlexBetween";
+import FlexBetween from "../../components/FlexBetween/FlexBetween"; 
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("First name is required"),

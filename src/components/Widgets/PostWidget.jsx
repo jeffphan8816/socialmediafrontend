@@ -5,11 +5,11 @@ import {
   ShareOutlined,
 } from "@mui/icons-material";
 import { Box, Divider, Typography, useTheme, IconButton } from "@mui/material";
-import FlexBetween from "components/FlexBetween/FlexBetween";
-import Friend from "components/Friend/Friend";
-import WidgetWrapper from "components/WidgetWrapper/WidgetWrapper";
+import FlexBetween from "../../components/FlexBetween/FlexBetween";
+import Friend from "../../components/Friend/Friend";
+import WidgetWrapper from "../WidgetWrapper";
 import { useSelector, useDispatch } from "react-redux";
-import { setPost } from "state";
+import { setPost } from "../../state";
 import { useEffect, useState } from "react";
 
 const PostWidget = ({

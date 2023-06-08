@@ -4,10 +4,10 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import HomePage from "scenes/homePage";
-import LoginPage from "scenes/loginPage";
+import HomePage from "./scenes/homePage";
+import LoginPage from "./scenes/loginPage";
 // import RegisterPage from "scenes/registerPage";
-import ProfilePage from "scenes/profilePage";
+import ProfilePage from "./scenes/profilePage";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";

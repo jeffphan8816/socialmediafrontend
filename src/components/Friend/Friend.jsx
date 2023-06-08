@@ -1,9 +1,9 @@
 import { PersonAddOutlined, PersonRemoveOutlined } from "@mui/icons-material";
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
-import FlexBetween from "components/FlexBetween/FlexBetween";
+import FlexBetween from "../FlexBetween/FlexBetween"; 
 import { useDispatch, useSelector } from "react-redux";
-import { setFriends } from "state";
-import UserImage from "components/UserImage/UserImage";
+import { setFriends } from "../../state"; 
+import UserImage from "../../components/UserImage";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 

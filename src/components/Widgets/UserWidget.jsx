@@ -5,13 +5,13 @@ import {
   WorkOutlineOutlined,
 } from "@mui/icons-material";
 import { Box, useTheme, Divider, Typography } from "@mui/material";
-import UserImage from "components/UserImage/UserImage";
-import WidgetWrapper from "components/WidgetWrapper/WidgetWrapper";
-import FlexBetween from "components/FlexBetween/FlexBetween";
+import UserImage from "../UserImage"; 
+import WidgetWrapper from "../WidgetWrapper";
+import FlexBetween from "../FlexBetween/FlexBetween"; 
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { setFriends } from "state";
+import { setFriends } from "../../state"; 
 
 const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null);

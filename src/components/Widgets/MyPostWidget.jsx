@@ -20,13 +20,13 @@ import {
   Input,
 } from "@mui/material";
 
-import FlexBetween from "components/FlexBetween/FlexBetween";
+import FlexBetween from "../../components/FlexBetween/FlexBetween";
 import Dropzone from "react-dropzone";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import UserImage from "components/UserImage/UserImage";
-import WidgetWrapper from "components/WidgetWrapper/WidgetWrapper";
-import { setPosts } from "state";
+import UserImage from "../UserImage"; 
+import WidgetWrapper from "../WidgetWrapper";
+import { setPosts } from "../../state";
 
 const MyPostWidget = ({ picturePath }) => {
   const dispatch = useDispatch();
