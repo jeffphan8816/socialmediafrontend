@@ -25,7 +25,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const getUser = async () => {
     // console.log(token)
-    const res = await fetch(`http://localhost:3001/users/${userId}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_HOST}/users/${userId}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ const UserWidget = ({ userId, picturePath }) => {
   };
 
   const getFriends = async () => {
-    const res = await fetch(`http://localhost:3001/users/${userId}/friends`, {
+    const res = await fetch(`${process.env.REACT_APP_API_HOST}/users/${userId}/friends`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

@@ -19,7 +19,7 @@ const AdvertWidget = () => {
         <Typography color={medium}>Create Ads</Typography>
       </FlexBetween>
       <img
-        src='http://localhost:3001/assets/info4.jpeg'
+        src={`${process.env.REACT_APP_API_HOST}/assets/info4.jpeg`}
         alt='Advert'
         width='100%'
         height='auto'
